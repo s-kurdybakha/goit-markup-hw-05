@@ -107,6 +107,7 @@ header-section
 }
 
 .item {
+    position: relative;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -120,6 +121,7 @@ header-section
 }
 
 .nav-link {
+    position: relative;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -128,6 +130,9 @@ header-section
     padding-top: 32px;
     padding-bottom: 32px;
     display: block;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-list {
@@ -155,6 +160,9 @@ header-section
     padding-top: 32px;
     padding-bottom: 32px;
     color: currentColor;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-icon {
@@ -175,6 +183,21 @@ header-section
 .nav-list .nav-link.current {
     color: var(--accent-color);
 }
+
+.nav-link.current::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background-color: var(--accent-bg-color);
+    border-radius: 2px;
+}
+
 
 .header-item:hover,
 .header-item:focus {
@@ -241,6 +264,9 @@ hero-section
     margin-left: auto;
     margin-right: auto;
     border: none;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover {
@@ -323,6 +349,7 @@ activities-section
 }
 
 .activities-item {
+    position: relative;
     margin-right: 30px;
 }
 
@@ -332,6 +359,30 @@ activities-section
 
 img {
     display: block;
+}
+
+
+.activities-item-box {
+    position: relative;
+}
+
+.activities-text {
+    position: absolute;
+    display: flex;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* 
@@ -427,6 +478,9 @@ clients-section
     border: 1px solid var(--second-border-color);
     border-radius: 4px;
     fill: var(--main-icon-color);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -472,10 +526,16 @@ clients-section
     height: 44px;
     border-radius: 50%;
     background-color: var(--main-bg-color);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
 .socials-icon {
     fill: var(--main-icon-color);
+    
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -513,6 +573,9 @@ clients-section
     height: 44px;
     border-radius: 50%;
     background-color: rgb(255, 255, 255, 0.1);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socials-icon {  
@@ -578,6 +641,9 @@ footer
     letter-spacing: 0.03em;
     color: var(--white-text-color);
     margin-bottom: 9px;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-email {
@@ -587,6 +653,9 @@ footer
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 9px;
     margin-right: auto;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-phone {
@@ -595,6 +664,9 @@ footer
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     margin-right: auto;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list .footer-address-map:hover,
