@@ -134,8 +134,7 @@ header-section
     padding-bottom: 32px;
     display: block;
 
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function)
+    transition: color 250ms var(--timing-function)
 }
 
 .header-list {
@@ -164,8 +163,7 @@ header-section
     padding-bottom: 32px;
     color: currentColor;
 
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+    transition: color 250ms var(--timing-function);
 }
 
 .header-icon {
@@ -189,7 +187,7 @@ header-section
 
 .nav-link.current::after {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     
     content: "";
@@ -480,9 +478,9 @@ clients-section
     border: 1px solid var(--second-border-color);
     border-radius: 4px;
     fill: var(--main-icon-color);
-
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+    
+    transition: fill 250ms var(--timing-function), border 250ms var(--timing-function);
+    
 }
 
 .clients-link:hover,
@@ -529,8 +527,7 @@ clients-section
     border-radius: 50%;
     background-color: var(--main-bg-color);
 
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);  
+    transition: background 250ms var(--timing-function);  
 }
 
 .socials-icon {
@@ -576,8 +573,7 @@ clients-section
     border-radius: 50%;
     background-color: rgb(255, 255, 255, 0.1);
 
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+    transition: background 250ms var(--timing-function);
 }
 
 .footer-socials-icon {  
@@ -625,7 +621,6 @@ footer
 }
 
 .footer-item {
-    padding-top: 6px;
     margin-bottom: 9px;
 }
 
@@ -644,8 +639,7 @@ footer
     color: var(--white-text-color);
     margin-bottom: 9px;
 
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+    transition: color 250ms var(--timing-function);
 }
 
 .footer-email {
@@ -656,8 +650,7 @@ footer
     margin-bottom: 9px;
     margin-right: auto;
 
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+    transition: color 250ms var(--timing-function);
 }
 
 .footer-phone {
@@ -667,8 +660,7 @@ footer
     color: rgba(255, 255, 255, 0.6);
     margin-right: auto;
 
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+    transition: color 250ms var(--timing-function);
 }
 
 .footer-list .footer-address-map:hover,
@@ -723,8 +715,7 @@ portfolio-section
     border: 0;
     border-radius: 4px;
     cursor: pointer;
-    transition-timing-function: var(--timing-function);
-    transition-duration: 250ms;
+    transition: background 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 
     }
 
@@ -769,6 +760,7 @@ portfolio-section
 
 .portfolio-link {
     display: block;
+    transition: box-shadow 1000ms var(--timing-function);
 }
 
 .portfolio-link:hover,
@@ -792,7 +784,7 @@ portfolio-section
     align-items: center;
     letter-spacing: 0.03em;
     padding: 63px 24px;
-    
+
     transform: translateY(100%);
     transition-timing-function: var(--timing-function);
     transition-duration: 250ms;
